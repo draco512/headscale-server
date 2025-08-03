@@ -26,6 +26,7 @@ services:
     image: headscale/headscale:latest
     container_name: headscale
     restart: unless-stopped
+    command: serve --config /etc/headscale/headscale.yaml
     volumes:
       - ./config/headscale:/etc/headscale
       - ./data/headscale:/var/lib/headscale

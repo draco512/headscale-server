@@ -9,9 +9,9 @@ noise:
   private_key_path: /var/lib/headscale/noise_private.key
 
 # Custom IP ranges for your network
-ip_prefixes:
-  - fd7a:115c:a1e0::/48  # IPv6
-  - 100.64.0.0/10        # IPv4 Tailscale range
+prefixes:
+  v4: 100.64.0.0/10        # IPv4
+  v6: fd7a:115c:a1e0::/48  # IPv6
 
 derp:
   server:
@@ -20,6 +20,7 @@ derp:
     region_code: "schef"
     region_name: "Schefenacker DERP"
     stun_listen_addr: "0.0.0.0:3478"
+    private_key_path: /var/lib/headscale/derp_server_private.key
   urls:
     - https://controlplane.tailscale.com/derpmap/default
   paths:
@@ -52,15 +53,17 @@ log:
   format: json
   level: info
 
-acl_policy_path: ""
+policy:
+  path: ""
 
 # DNS Configuration
-dns_config:
+dns:
   override_local_dns: true
   nameservers:
-    - 1.1.1.1    # Cloudflare
-    - 8.8.8.8    # Google backup
-  domains: []
+    global:
+      - 1.1.1.1    # Cloudflare
+      - 8.8.8.8    # Google backup
+  search_domains: []
   magic_dns: true
   base_domain: schefenacker.vpn
 
