@@ -1,0 +1,13 @@
+# Environment files
+.env
+
+# Data directories
+data/
+!data/.gitkeep
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+.DS_Store
