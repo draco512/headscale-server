@@ -20,7 +20,7 @@ providers:
 certificatesResolvers:
   letsencrypt:
     acme:
-      email: ${ACME_EMAIL}
+      email: vps@draco512.de
       storage: /letsencrypt/acme.json
       httpChallenge:
         entryPoint: web
