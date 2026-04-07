@@ -14,7 +14,7 @@ Self-hosted Tailscale coordination server with web UI and automatic SSL certific
 2. **Configure email:**
    ```bash
    # Edit .env file
-   ACME_EMAIL=vps@draco512.de
+   ACME_EMAIL=your-email@example.com
    ```
 
 3. **Start services:**
@@ -36,9 +36,9 @@ Self-hosted Tailscale coordination server with web UI and automatic SSL certific
 
 ## URLs
 
-- Headscale API: `https://vps.schefenacker.net`
-- Admin UI: `https://admin.vps.schefenacker.net`
-- Traefik Dashboard: `https://traefik.vps.schefenacker.net`
+- Headscale API: `https://YOUR_DOMAIN`
+- Admin UI: `https://admin.YOUR_DOMAIN`
+- Traefik Dashboard: `https://traefik.YOUR_DOMAIN`
 
 ## Management Commands
 
@@ -70,6 +70,6 @@ docker-compose up -d
 
 ## Troubleshooting
 
-- **SSL Issues**: Check DNS records point to `194.164.49.35`
+- **SSL Issues**: Check DNS records point to `YOUR_SERVER_IP`
 - **DERP Issues**: Verify ports 443, 3478 are open
 - **Database**: SQLite file at `data/headscale/db.sqlite`

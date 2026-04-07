@@ -1,4 +1,4 @@
-server_url: https://vps.schefenacker.net
+server_url: https://YOUR_DOMAIN
 listen_addr: 0.0.0.0:8080
 metrics_listen_addr: 127.0.0.1:9090
 grpc_listen_addr: 0.0.0.0:50443
@@ -17,8 +17,8 @@ derp:
   server:
     enabled: true
     region_id: 999
-    region_code: "schef"
-    region_name: "Schefenacker DERP"
+    region_code: "custom"
+    region_name: "Custom DERP"
     stun_listen_addr: "0.0.0.0:3478"
     private_key_path: /var/lib/headscale/derp_server_private.key
   urls:
@@ -65,7 +65,7 @@ dns:
       - 8.8.8.8    # Google backup
   search_domains: []
   magic_dns: true
-  base_domain: schefenacker.vpn
+  base_domain: your-network.vpn
 
 unix_socket: /var/run/headscale/headscale.sock
 unix_socket_permission: "0770"

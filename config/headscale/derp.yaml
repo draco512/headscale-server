@@ -1,13 +1,13 @@
 regions:
   999:
     regionid: 999
-    regioncode: schef
-    regionname: "Schefenacker DERP"
+    regioncode: custom
+    regionname: "Custom DERP"
     nodes:
-      - name: vps-schefenacker
+      - name: vps-custom
         regionid: 999
-        hostname: vps.schefenacker.net
-        ipv4: "194.164.49.35"
+        hostname: YOUR_DOMAIN
+        ipv4: "YOUR_SERVER_IP"
         derpport: 443
         stunport: 3478
         stunonly: false

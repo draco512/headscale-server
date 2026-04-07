@@ -10,4 +10,4 @@ data/
 
 # Temporary files
 *.tmp
-.DS_Store.env
+.DS_Store
